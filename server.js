@@ -16,7 +16,7 @@ console.log(`✅ WebSocket server is running on ws://localhost:${PORT}`);
 // This function broadcasts a room update to all clients in a specific room
 function broadcastRoomUpdate(roomId) {
   const room = rooms.get(roomId);
-  if (!room) return; // No room, no need to broadcast
+  if (!room) return; 
 
   const playerCount = room.size;
   console.log(`Broadcasting to room ${roomId}: ${playerCount} players.`);
