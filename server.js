@@ -2,7 +2,7 @@ import { WebSocketServer } from "ws";
 import { parse } from "url";
 import { randomUUID } from "crypto";
 
-const PORT = 8081;
+const PORT = process.env.PORT || 8081;
 const wss = new WebSocketServer({ port: PORT });
 const rooms = new Map();
 console.log(`✅ [SERVER] WebSocket server is running on ws://localhost:${PORT}`);
